@@ -4,7 +4,7 @@
 This paper guided this approach to predicting ethnicity based on a resume. The goal is to use the principle of homiphily (people associate with others of similar ethnicity)
 to predict ethnicity.
 
-# Code Breakdown:
+# Code Breakdown
 1. dataProcessing.py - Given a directory of json resumes, creates two dictionaries containing the information we need.
   name_to_related - goes from names to urls of related people on linkedin
   url_to_name - goes from urls to names
