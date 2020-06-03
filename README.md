@@ -17,6 +17,6 @@ to predict ethnicity.
   Character Set
   Homiphily
 
-#Further Steps
+# Further Steps
 1. Rerun the process on the newer version of the data. See if there is a higher rate of connections.
 2. Train a more traditional classifier based on the resumes, by hand selecting features that do not relate to employment.
