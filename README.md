@@ -12,7 +12,7 @@ to predict ethnicity.
   from a seed number. It only takes people who have connections (~1/20). Essentially is a depth 2 search and will create pairs
   of people.
 3. adjacenyList.py - Creates an adjaceny list from a randomDataSample.
-4. sampledGraph.py - Given an adjaceny list, creates a graph and labels all people via:
+4. decisionRule.py - Given an adjaceny list, creates a graph and labels all people via:
   (US Census,
   Character Set,
   Homiphily)
