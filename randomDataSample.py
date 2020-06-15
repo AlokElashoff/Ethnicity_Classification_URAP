@@ -37,19 +37,18 @@ for i in range(r):
         print("--- %s seconds ---" % (time.time() - start_time))
         start_time = time.time()
 
-n = 10
+n = 1000000
 random.seed(1)
-names = random.sample(name_to_related.keys(), n)
-max_n = 100
+seed_names = random.sample(name_to_related.keys(), n)
 
+names = []
 
-
-for name in names:
-    if len(names) > max_n:
-        break
+for name in seed_names:
     for related in name_to_related[name]:
         if related in url_to_name:
             names.append(url_to_name[related])
+            if name not in names:
+                names.append(name)
 
 sample_adj_list = dict()
 for name in names:
@@ -68,7 +67,7 @@ print("Finished creating sample")
 print("--- %s seconds ---" % (time.time() - start_time))
 start_time = time.time()
 
-with open('sample_adj_list.json', 'w') as f:
+with open('sample_adj_list_' + str(n) + '.json', 'w', encoding='utf-8') as f:
     json.dump(sample_adj_list, f)
 
 print("Finished writing sample")

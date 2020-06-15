@@ -38,11 +38,25 @@ for file in files:
 
             incoming = json.loads(line)
 
-            name_to_related[item_count % len(name_to_related)][incoming['name']] = incoming['related_people']
+            related_people = []
+            try:
+                inc_related = incoming['related_people']
+                inc_url = incoming['profile_url']
+                inc_name = incoming['name']
+            except:
+                continue
 
-            url_to_name[item_count % len(url_to_name)][incoming['profile_url']] = incoming['name']
+            for related in inc_related:
+                related_people.append(related.split("/")[-1])
 
-            item_count += 1
+            if inc_url:
+                profile_url = inc_url.split("/")[-1]
+
+                name_to_related[item_count % len(name_to_related)][inc_name] = related_people
+
+                url_to_name[item_count % len(url_to_name)][profile_url] = inc_name
+
+                item_count += 1
 
 os.chdir('/DATA-0/home/campus.berkeley.edu/alok_elashoff/processed_data')
 
