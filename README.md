@@ -7,9 +7,7 @@ to predict ethnicity.
 # Code Breakdown
 1. dataProcessing.py - Given a directory of json resumes, creates two dictionaries containing the information we need.
   name_to_related - goes from names to urls of related people on linkedin
-  
   url_to_name - goes from urls to names
-  
 2. randomDataSample.py - Given the outputs from dataProcessing.py, creates a random sample of people and their connections
   from a seed number. It only takes people who have connections (~1/20). Essentially is a depth 2 search and will create pairs
   of people.
