@@ -13,9 +13,9 @@ to predict ethnicity.
   of people.
 3. adjacenyList.py - Creates an adjaceny list from a randomDataSample.
 4. sampledGraph.py - Given an adjaceny list, creates a graph and labels all people via:
-  US Census
-  Character Set
-  Homiphily
+  (US Census,
+  Character Set,
+  Homiphily)
 
 # Further Steps
 1. Rerun the process on the newer version of the data. See if there is a higher rate of connections.
