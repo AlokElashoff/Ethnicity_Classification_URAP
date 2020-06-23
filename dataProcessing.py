@@ -10,7 +10,8 @@ import glob, os
 import time
 
 files = []
-os.chdir("../cognism-enriched")
+
+os.chdir("../cognism-enriched") #Path to cognism-enriched 4/20 here
 for file in glob.glob("*.json"):
     files.append(file)
 
@@ -58,7 +59,7 @@ for file in files:
 
                 item_count += 1
 
-os.chdir('/DATA-0/home/campus.berkeley.edu/alok_elashoff/processed_data')
+os.chdir('/DATA-0/home/campus.berkeley.edu/alok_elashoff/processed_data') # Ouput Path
 
 for i in range(len(name_to_related)):
     with open('name_to_related' + str(i) + '.json', 'w') as handle:

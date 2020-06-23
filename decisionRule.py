@@ -7,9 +7,9 @@ import numpy as np
 import networkx as nx
 from langdetect import detect
 
-os.chdir('/DATA-0/home/campus.berkeley.edu/alok_elashoff/processed_data')
+os.chdir('/DATA-0/home/campus.berkeley.edu/alok_elashoff/processed_data') # Path to where processed data is stored
 
-df = pd.read_excel("census_2010.xlsx")
+df = pd.read_excel("data/census_2010.xlsx")
 df = df.drop(["rank", "count", "prop100k", "cum_prop100k"], axis = 1)
 df = df.replace({"(S)": 0})
 
@@ -163,7 +163,7 @@ for full_name in char_set:
 
 # Create graph output file
 nx.set_node_attributes(graph, name_to_race, "race")
-os.chdir('/DATA-0/home/campus.berkeley.edu/alok_elashoff/results')
+os.chdir('/DATA-0/home/campus.berkeley.edu/alok_elashoff/results') # Output path for graph
 nx.write_gexf(graph, "sample_" + str(total) + "_decision_rule.gexf")
 
 # Print Stats

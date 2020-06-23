@@ -10,7 +10,7 @@ import glob, os
 import time
 import random
 
-os.chdir('/DATA-0/home/campus.berkeley.edu/alok_elashoff/processed_data')
+os.chdir('/DATA-0/home/campus.berkeley.edu/alok_elashoff/processed_data') # Path to processed data
 print("Processing has begun")
 start_time = time.time()
 
